@@ -38,6 +38,15 @@ If audio stays local, select the Network-Displays output in audio settings.
 The plugin never starts sharing automatically or changes network configuration.
 The prerequisite check is advisory, not an end-to-end casting test.
 
+## Known issues
+
+GNOME Network Displays 0.99.0 aborts with SIGABRT every time its window is
+closed. The cast itself is unaffected and nothing is lost, but Omarchy shows a
+"Process crashed" notification. It is an upstream use of an uninitialized
+`g_autofree` pointer in the PulseAudio teardown path, already fixed in GNOME's
+git but not yet released. See [docs/crash-on-close.md](docs/crash-on-close.md)
+for the diagnosis and a PKGBUILD patch workaround.
+
 ## Install from GitHub
 
 ```sh
