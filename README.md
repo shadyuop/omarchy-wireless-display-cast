@@ -68,7 +68,9 @@ Copy this directory to `~/.config/omarchy/plugins/shady.wireless-display-cast`,
 then run `omarchy-shell shell rescanPlugins` and
 `omarchy plugin enable shady.wireless-display-cast`.
 
-Disable with `omarchy plugin disable shady.wireless-display-cast`.
+Disable with `omarchy plugin disable shady.wireless-display-cast`. Remove it
+entirely with `omarchy plugin remove shady.wireless-display-cast`; the plugin
+keeps no state outside its own directory.
 Validate with `omarchy plugin validate .` and `bash -n cast-helper`.
 
 ## License
