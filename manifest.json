@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "shady.wireless-display-cast",
   "name": "Wireless Display Cast",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "shady",
   "license": "MIT",
   "description": "Open the Miracast receiver picker and check wireless display prerequisites using GNOME Network Displays.",

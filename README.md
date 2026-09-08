@@ -7,12 +7,17 @@ does not infer an active cast from whether the app is running.
 
 ## Interface
 
-![Wireless display panel with prerequisite statuses and Choose display button](docs/preview.png)
+![Wireless display panel with a collapsed Prerequisites checked row and Choose display button](docs/preview.png)
+![The same panel expanded to show Casting app, NetworkManager, and Wi-Fi Direct rows](docs/preview-expanded.png)
 
-A compact, theme-aware panel with a cast icon, three prerequisite status rows,
-an accent-colored **Choose display** button, and a refresh icon. Status labels
-remain readable without relying on color. Keyboard users can Tab between
-controls, activate them with Enter or Space, and press Escape to close.
+A compact, theme-aware panel with a cast icon, a prerequisites card, an
+accent-colored **Choose display** button, and a refresh icon. While every
+prerequisite passes, the card collapses to a single **Prerequisites checked**
+row; click it (or press Enter/Space on it) to reveal the Casting app,
+NetworkManager, and Wi-Fi Direct rows. Anything missing, pending, or
+unreadable keeps those rows visible. Status labels remain readable without
+relying on color. Keyboard users can Tab between controls, activate them with
+Enter or Space, and press Escape to close.
 
 Detailed instructions stay here; the panel shows a short receiver setup hint.
 Missing-backend instructions appear only when needed.
