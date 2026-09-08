@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "shady.wireless-display-cast",
+  "name": "Wireless Display Cast",
+  "version": "1.0.0",
+  "author": "shady",
+  "license": "MIT",
+  "description": "Open the Miracast receiver picker and check wireless display prerequisites using GNOME Network Displays.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {"barWidget": "CastPanel.qml"},
+  "barWidget": {
+    "displayName": "Wireless Display Cast",
+    "description": "Cast a screen to a wireless display",
+    "category": "System",
+    "defaultSection": "right",
+    "allowMultiple": false
+  }
+}

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+case "${1:-status}" in
+  status)
+    backend=false
+    command -v gnome-network-displays >/dev/null 2>&1 && backend=true
+    network=false
+    systemctl is-active --quiet NetworkManager && network=true
+    devices=$(nmcli -t -f TYPE device 2>/dev/null || true)
+    p2p=false
+    if [[ "$devices" == *wifi-p2p* ]]; then p2p=true; fi
+    jq -cn --argjson backend "$backend" --argjson network "$network" --argjson p2p "$p2p" \
+      '{backend: $backend, network: $network, p2p: $p2p}'
+    ;;
+  open)
+    if ! command -v gnome-network-displays >/dev/null 2>&1; then
+      printf '%s\n' 'GNOME Network Displays is missing. Install it with: omarchy pkg aur add gnome-network-displays' >&2
+      exit 1
+    fi
+    # GApplication opens the existing picker if already running. Screen and
+    # receiver selection remain explicit user actions in the backend UI.
+    exec gnome-network-displays
+    ;;
+  *) printf 'Usage: bash cast-helper [status|open]\n' >&2; exit 2 ;;
+esac
