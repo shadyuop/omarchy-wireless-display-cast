@@ -5,6 +5,18 @@ prerequisites and open GNOME Network Displays. It owns receiver discovery,
 connection progress, screen selection, and disconnect controls. This plugin
 does not infer an active cast from whether the app is running.
 
+## Interface
+
+![Wireless display panel with prerequisite statuses and Choose display button](docs/preview.png)
+
+A compact, theme-aware panel with a cast icon, three prerequisite status rows,
+an accent-colored **Choose display** button, and a refresh icon. Status labels
+remain readable without relying on color. Keyboard users can Tab between
+controls, activate them with Enter or Space, and press Escape to close.
+
+Detailed instructions stay here; the panel shows a short receiver setup hint.
+Missing-backend instructions appear only when needed.
+
 ## Requirements
 
 Install the Miracast backend: `omarchy pkg aur add gnome-network-displays`.
@@ -18,7 +30,7 @@ https://github.com/GNOME/gnome-network-displays/blob/master/README.md
 ## Use
 
 1. Click the Wireless Display Cast bar icon.
-2. Open the picker and select your receiver.
+2. Click **Choose display** and select your receiver.
 3. Approve a screen in the sharing prompt.
 4. Disconnect through GNOME Network Displays when finished.
 
