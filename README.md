@@ -36,7 +36,21 @@ https://github.com/GNOME/gnome-network-displays/blob/master/README.md
 
 1. Click the Wireless Display Cast bar icon.
 2. Click **Choose display** and select your receiver.
+
+   ![GNOME Network Displays listing available video sinks, including LG webOS and Samsung TVs](docs/receiver-list.png)
+
+   GNOME Network Displays opens on its **Available Video Sinks** list. A
+   receiver can appear more than once when it advertises over several
+   protocols or interfaces; any of its entries works.
+
 3. Approve a screen in the sharing prompt.
+
+   ![Screen-sharing portal with Windows, Outputs, and Region tabs, showing a grid of window thumbnails](docs/screen-picker.png)
+
+   The Wayland portal asks what to share: a single **window**, a whole
+   **output** (monitor), or a **region** of one. Pick one and confirm; the
+   cast starts once the receiver accepts.
+
 4. Disconnect through GNOME Network Displays when finished.
 
 If audio stays local, select the Network-Displays output in audio settings.
